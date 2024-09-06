@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.Views.AcercaPage"
+             xmlns:models="clr-namespace:AppFakeStore.Models"
+             Title="AcercaPage"
+             BackgroundColor="AntiqueWhite">
+    <VerticalStackLayout>
+        <Image Source="yo.jpg" WidthRequest="150" HeightRequest="150" Margin="0,25,0,25" />
+        <Label 
+            Text="Cristian Ariel Erro"
+            TextColor="Black"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+
+        <Button x:Name="IconBtn" Margin="0, 10" ContentLayout="Top, 5" Text="Contacto" Clicked="IconBtn_Clicked" WidthRequest="120" HeightRequest="70" TextColor="AntiqueWhite" BackgroundColor="Black">
+            <Button.ImageSource >
+                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xe158;" />
+            </Button.ImageSource>
+        </Button>
+        <Button  x:Name="BackBtn" ContentLayout="Top, 5" Text="Volver" Clicked="BackBtn_Clicked" WidthRequest="120" HeightRequest="70" TextColor="AntiqueWhite" BackgroundColor="Black">
+            <Button.ImageSource >
+                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xeba6;"/>
+            </Button.ImageSource>
+        </Button>
+
+        
+    </VerticalStackLayout>
+</ContentPage>

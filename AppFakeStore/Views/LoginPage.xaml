@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:AppFakeStore.ViewModels"
+             x:DataType="vm:LoginViewModel"
+             xmlns:model="clr-namespace:AppFakeStore.Models"
+             Title="login"
+             x:Class="AppFakeStore.Views.LoginPage">
+    
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="tiendaropa.jpeg"></Image>
+        <Grid BackgroundColor="AntiqueWhite" Opacity=".7"></Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Image Aspect="AspectFit" HeightRequest="120" Source="comprabolsa.webp" ></Image>
+
+            
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                        CornerRadius="30,30,0,0"
+                        Fill="White">
+            </RoundRectangle>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold" FontFamily="bold" FontSize="Medium" Text="Bienvenido" TextColor="Black"></Label>
+                <Label FontFamily="medium" Text="Logearse para continuar" TextColor="Black"></Label>
+
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*" >
+                    <RoundRectangle BackgroundColor="LightCyan" CornerRadius="10" HeightRequest="60" 
+                                HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60">
+
+                    </RoundRectangle>
+                    <Image HorizontalOptions="Center" >
+
+                        <Image.Source >
+                            <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf0e0;" Size="44" Color="Black" ></FontImageSource>
+                        </Image.Source>
+
+                    </Image>
+                    <Entry Grid.Column="1" Placeholder="Mail" VerticalOptions="Center" TextColor="Black"></Entry>
+                </Grid>
+
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*" >
+                    <RoundRectangle BackgroundColor="LightCyan" CornerRadius="10" HeightRequest="60" 
+                HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60">
+
+                    </RoundRectangle>
+                    <Image HorizontalOptions="Center" >
+
+                        <Image.Source >
+                            <FontImageSource FontFamily="AwesomeSolid" Glyph="&#xf084;" Size="44" Color="Black" ></FontImageSource>
+                        </Image.Source>
+
+                    </Image>
+                    <Entry Grid.Column="1" Placeholder="Contraseña" VerticalOptions="Center" IsPassword="True" TextColor="Black"></Entry>
+                </Grid>
+
+                <Button Margin="0,20,0,0" BackgroundColor="Black" HeightRequest="60" Text="Login" TextColor="White" Command="{Binding LogeoCommand}"></Button>
+                
+
+            </VerticalStackLayout>
+        </Grid>
+
+
+    </Grid>
+</ContentPage>
