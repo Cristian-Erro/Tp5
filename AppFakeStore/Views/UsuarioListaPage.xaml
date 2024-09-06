@@ -33,7 +33,7 @@
                         RowDefinitions="Auto,*">
 
                             <Image Grid.Column="0"
-                           Source="userlogo.png"
+                           Source="dotnet_bot.png"
                            WidthRequest="80"
                            HeightRequest="80"
                            Aspect="AspectFit"/>
