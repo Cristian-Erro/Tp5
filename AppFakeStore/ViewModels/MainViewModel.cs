@@ -25,8 +25,15 @@ public partial class MainViewModel : BaseViewModel
     [RelayCommand]
     public async Task Exit()
     {
-        //await Application.Current.MainPage.DisplayAlert("Salir", "¿Desea terminar la sesión y salir?", "Aceptar");
-        await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+        bool answer = await Application.Current.MainPage.DisplayAlert("Salir", "¿Desea cerrar sesion?", "Aceptar", "Cancelar");
+
+        if (answer)
+        {
+
+            // Volver a  inicio de sesión
+            await Application.Current.MainPage.Navigation.PopToRootAsync(); // vuelve una pagina atras
+            await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new LoginPage())); // va a la pagina de login
+        }
     }
 
     //comando nuevo para acceder a la lista de usuarios

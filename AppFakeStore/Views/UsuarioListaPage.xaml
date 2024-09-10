@@ -25,13 +25,14 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Usuario">
-                        <Grid 
-                        ColumnDefinitions=".3*,.7*"
-                        Margin="10" 
-                        ColumnSpacing="10" 
-                        RowSpacing="10" 
-                        RowDefinitions="Auto,*">
-
+                        
+                            <Grid
+                            ColumnDefinitions=".3*,.7*"
+                            Margin="10" 
+                            ColumnSpacing="10" 
+                            RowSpacing="10" 
+                            RowDefinitions="Auto,*">
+        
                             <Image Grid.Column="0"
                            Source="dotnet_bot.png"
                            WidthRequest="80"
@@ -43,7 +44,8 @@
                            VerticalOptions="Center"
                            TextColor="Blue"/>
 
-                        </Grid>
+                            </Grid>
+                  
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 

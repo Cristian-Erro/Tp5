@@ -7,4 +7,6 @@ public static class Constants
 
     // constante nueva para el endpoint de usuarios
     public const string UsersEndpoint = "users";
+    //constante nueva para login
+    public const string LoginEndpoint = "auth/login";
 }

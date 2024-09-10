@@ -5,7 +5,8 @@
              x:DataType="vm:LoginViewModel"
              xmlns:model="clr-namespace:AppFakeStore.Models"
              Title="login"
-             x:Class="AppFakeStore.Views.LoginPage">
+             x:Class="AppFakeStore.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
     
     <Grid RowDefinitions=".3*,.7*">
         <Image Aspect="AspectFill" Source="tiendaropa.jpeg"></Image>
@@ -37,7 +38,7 @@
                         </Image.Source>
 
                     </Image>
-                    <Entry Grid.Column="1" Placeholder="Mail" VerticalOptions="Center" TextColor="Black"></Entry>
+                    <Entry Grid.Column="1" Placeholder="Usuario" VerticalOptions="Center" TextColor="Black" Text="{Binding Username}"></Entry>
                 </Grid>
 
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*" >
@@ -52,10 +53,10 @@
                         </Image.Source>
 
                     </Image>
-                    <Entry Grid.Column="1" Placeholder="Contraseña" VerticalOptions="Center" IsPassword="True" TextColor="Black"></Entry>
+                    <Entry Grid.Column="1" Placeholder="Contraseña" VerticalOptions="Center" IsPassword="True" TextColor="Black" Text="{Binding Password}"></Entry>
                 </Grid>
 
-                <Button Margin="0,20,0,0" BackgroundColor="Black" HeightRequest="60" Text="Login" TextColor="White" Command="{Binding LogeoCommand}"></Button>
+                <Button Margin="0,20,0,0" BackgroundColor="Black" HeightRequest="60" Text="Login" TextColor="White" Command="{Binding LoginCommand}"></Button>
                 
 
             </VerticalStackLayout>

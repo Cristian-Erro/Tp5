@@ -10,7 +10,12 @@ namespace AppFakeStore
         {
             InitializeComponent();            
             //MainPage = new AppShell();
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new MainPage());
+            ShowLoginPage();
+        }
+        private async void ShowLoginPage()
+        {
+            await MainPage.Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
         }
     }
 }
